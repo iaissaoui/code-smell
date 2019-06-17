@@ -17,16 +17,13 @@ public class CustomerReport {
         this.account = checkNotNull(account);
     }
 
+    
     public String printCustomerDaysOverdrawn() {
-        String fullName = customer.getFullName();
-        String accountDescription = account.getOverDrawnDescription();  
-        return fullName + accountDescription;
+        return customer.getFullName() + account.getOverDrawnDescription();
     }
 
     public String printCustomerMoney() {
-        String fullName = customer.getFullName();
-        String accountDescription = account.getMoneyDescription();
-        return fullName + accountDescription;
+        return customer.getFullName() + account.getMoneyDescription();
     }
 
     public String printCustomerAccount() {
