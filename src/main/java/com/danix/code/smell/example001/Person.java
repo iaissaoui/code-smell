@@ -12,11 +12,6 @@ public class Person extends Customer {
     }
 
     @Override
-    public void withdraw(final Money money) {
-    	account.withdraw(money);
-    }
-
-    @Override
     protected String getFullName() {
         return getName() + " " + surname + " ";
     }

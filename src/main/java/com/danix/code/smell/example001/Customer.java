@@ -16,7 +16,10 @@ public abstract class Customer {
         this.account = account;
     }
 
-    public abstract void withdraw(Money money);
+    public void withdraw(Money money) {
+    	account.withdraw(money);
+    	
+    };
     
     public double getOverdraftDiscount() {
     	return 1;

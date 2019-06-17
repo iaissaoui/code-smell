@@ -19,10 +19,6 @@ public class Company extends Customer {
         
     }
 
-    @Override
-    public void withdraw(final Money money) { 
-    	account.withdraw(money);
-    }
 
     @Override
     protected String getFullName() {
