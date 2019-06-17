@@ -33,7 +33,7 @@ public class Account {
         if (type.isPremium()) {
             double result = 10;
             if (getDaysOverdrawn() > 7) {
-                result += (getDaysOverdrawn() - 7) * 1.0;
+                result += (getDaysOverdrawn() - 7);
             }
 
             return result;

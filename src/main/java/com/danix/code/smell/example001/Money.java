@@ -23,7 +23,7 @@ public class Money {
     }
 
     public static Money newEuro(double amount) {
-        return new Money(amount, EUR_CURRENCY);
+    	return newInstance(amount,EUR_CURRENCY);
     }
 
     public double getAmount() {

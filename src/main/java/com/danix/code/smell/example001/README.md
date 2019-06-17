@@ -1,3 +1,14 @@
+# ia
+
+- Start with the obvious:
+	- duplicate code:
+	- unnecessary operations
+	- exposed methods
+	- rewriting of methods
+	- bidirectional "Has a" relationship
+	
+
+
 # Code smells
 
 - Duplicated Code
