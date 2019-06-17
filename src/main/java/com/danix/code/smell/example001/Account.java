@@ -102,4 +102,19 @@ public class Account {
         }
 
     }
+    
+    public String getOverDrawnDescription() {
+    	return "Account: IBAN: " + this.getIban() + ", Days Overdrawn: "
+                + this.getDaysOverdrawn(); 
+    }
+    
+    public String getMoneyDescription() {
+    	return "Account: IBAN: " + this.getIban() + ", Money: " + this.getMoneyAmount(); 
+    }
+
+	public String printCustomerAccount() {
+		
+		return "Account: IBAN: " + this.getIban() + ", Money: " + this.getMoneyAmount() + ", Account type: "
+                + this.getType();
+	}
 }

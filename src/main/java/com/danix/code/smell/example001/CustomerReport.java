@@ -19,25 +19,21 @@ public class CustomerReport {
 
     public String printCustomerDaysOverdrawn() {
         String fullName = customer.getFullName();
-
-        String accountDescription = "Account: IBAN: " + account.getIban() + ", Days Overdrawn: "
-                + account.getDaysOverdrawn();
+        String accountDescription = account.getOverDrawnDescription();  
         return fullName + accountDescription;
     }
 
     public String printCustomerMoney() {
         String fullName = customer.getFullName();
-        String accountDescription = "";
-        accountDescription += "Account: IBAN: " + account.getIban() + ", Money: " + account.getMoneyAmount();
+        String accountDescription = account.getMoneyDescription();
         return fullName + accountDescription;
     }
 
     public String printCustomerAccount() {
-        return "Account: IBAN: " + account.getIban() + ", Money: " + account.getMoneyAmount() + ", Account type: "
-                + account.getType();
+    	return account.printCustomerAccount();
     }
 
     public String printCustomer() {
-        return customer.getName() + " " + customer.getEmail();
+        return customer.printCustomer();
     }
 }

@@ -42,4 +42,8 @@ public abstract class Customer {
     public void setEmail(final String email) {
         this.email = email;
     }
+
+	public String printCustomer() {
+	 return this.getName() + " " + this.getEmail();
+	}
 }

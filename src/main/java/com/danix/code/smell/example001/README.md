@@ -12,12 +12,12 @@
 # Code smells
 
 - Duplicated Code
-  - For determining the fullName of the Customer
-  - In the customer.withdraw method we can see similar code
+  - For determining the fullName of the Customer*
+  - In the customer.withdraw method we can see similar code OK
   - Possible refactoring: Extract method
 
 - Long Method
-  - Customer.withdraw method has more than 5 lines of code
+  - Customer.withdraw method has more than 5 lines of code OK
   - Possible refactorings: Extract method
 
 - Divergent Change
