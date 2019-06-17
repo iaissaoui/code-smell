@@ -8,6 +8,7 @@ public abstract class Customer {
     protected String name;
     protected String email;
     protected Account account;
+    
 
     Customer(final String name, final String email, final Account account) {
         this.name = name;
@@ -16,6 +17,10 @@ public abstract class Customer {
     }
 
     public abstract void withdraw(Money money);
+    
+    public double getOverdraftDiscount() {
+    	return 1;
+    };
 
     protected abstract String getFullName();
 

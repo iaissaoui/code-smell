@@ -15,6 +15,7 @@ public class Account {
 
     private Customer customer;
 
+
     public Account(final AccountType type, final int daysOverdrawn) {
         super();
         this.type = type;
@@ -88,5 +89,17 @@ public class Account {
 
     public double getMoneyAmount() {
         return money.getAmount();
+    }
+    
+    public void withdraw(Money money) {
+
+        if (this.isOverdraft()) {
+        	this.substract(Money.newInstance(
+                    money.getAmount() + money.getAmount() * this.overdraftFee() * customer.getOverdraftDiscount(),
+                    money.getCurrency()));
+        } else {
+        	this.substract(Money.newInstance(money.getAmount(), money.getCurrency()));
+        }
+
     }
 }

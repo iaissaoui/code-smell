@@ -21,18 +21,16 @@ public class Company extends Customer {
 
     @Override
     public void withdraw(final Money money) { 
-        if (account.isOverdraft()) {
-            account.substract(Money.newInstance(
-                    money.getAmount() + money.getAmount() * account.overdraftFee() * companyOverdraftDiscount,
-                    money.getCurrency()));
-        } else {
-            account.substract(Money.newInstance(money.getAmount(), money.getCurrency()));
-        }
-        
+    	account.withdraw(money);
     }
 
     @Override
     protected String getFullName() {
         return getName();
     }
+
+	@Override
+	public double getOverdraftDiscount() {
+		return companyOverdraftDiscount;
+	}
 }
