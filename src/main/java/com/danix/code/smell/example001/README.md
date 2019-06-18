@@ -1,5 +1,7 @@
 # ia
 
+
+- Created Branch that allows for test refactoring as well
 - Start with the obvious:
 	- duplicate code:
 	- unnecessary operations
